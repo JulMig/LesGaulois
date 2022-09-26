@@ -15,13 +15,14 @@ public class Gaulois {
 		return nom;
 	}
 	
+	public String prendreParole() {
+		return "Le gaulois " + nom + " ' ";
+	}
+	
 	public void parler(String texte) {
 		System.out.println(prendreParole() + "\"" + texte + "\"");
 	}
 	
-	public String prrendreParole() {
-		return "Le gaulois " + nom + " ' ";
-	}
 	
 	public void frapper(Romain romain) {
 		System.out.println(nom + "envoie un grand coup dans la machoire de" + romain.getNom());
