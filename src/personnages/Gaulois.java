@@ -11,6 +11,7 @@ public class Gaulois {
 		this.force = force;
 	}
 
+
 	public String getNom() {
 		return nom;
 	}
@@ -29,20 +30,20 @@ public class Gaulois {
 		romain.recevoirCoup(force / 3);
 	}
 
-	@Override
-	public String toString() {
+    @Override
+ 	public String toString() {
 		return "Gaulois [nom=" + nom + ", force=" + force + ", effetPotion=" + effetPotion + "]";
 	}
 	
 	
 	
 	public static void main(String[] args) {
-		//TODO crée un main permettant de tester la classe Gaulois
+		Gaulois asterix;
+		asterix = new Gaulois("Astérix", 8);
+		System.out.println(asterix.getNom());
+		System.out.println(asterix);
 		
 	}
 	
 	
-	
-	
-
 }
