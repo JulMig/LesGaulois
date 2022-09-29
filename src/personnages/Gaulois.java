@@ -15,7 +15,7 @@ public class Gaulois {
 		return nom;
 	}
 	
-	public String prendreParole() {
+	private String prendreParole() {
 		return "Le gaulois " + nom + " ' ";
 	}
 	
