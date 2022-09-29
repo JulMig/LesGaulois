@@ -30,6 +30,17 @@ public class Romain {
 		}
 	}
 	
+	public static void main(String[] args) {
+		Romain romain;
+		romain = new Romain("Minus",6);
+		
+		System.out.println(romain.prendreParole());
+		romain.parler("Bonjour...");
+		romain.recevoirCoup(2);
+		romain.recevoirCoup(3);
+		romain.recevoirCoup(1);
+	}
+	
 	
 
 }
