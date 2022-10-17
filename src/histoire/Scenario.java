@@ -2,6 +2,7 @@ package histoire;
 import personnages.Gaulois;
 import personnages.Romain;
 import personnages.Druide;
+import personnages.Equipement;
 
 public class Scenario {
 
@@ -14,6 +15,10 @@ public class Scenario {
 		obelix = new Gaulois("Obélix", 10);
 		minus = new Romain("Minus",6);
 		panoramix = new Druide("Panoramix",5,10);
+		
+		minus.sEquiper(Equipement.BOUCLIER);
+		minus.sEquiper(Equipement.CASQUE);
+		
 		
 		panoramix.parler("Je vais aller préparer une petite potion...");
 		panoramix.preparerPotion();

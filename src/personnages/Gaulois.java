@@ -3,8 +3,11 @@ package personnages;
 public class Gaulois {
 	private String nom;
 	private int force;
-	private int effetPotion = 1;
+	private int nbTrophees;
 	
+	private int effetPotion = 1;
+	private Equipement[] trophees = new Equipement[100];
+
 	
 	public Gaulois(String nom, int force) {
 		this.nom = nom;
@@ -16,6 +19,10 @@ public class Gaulois {
 		return nom;
 	}
 	
+//	private String prendreParole() {
+//		return "Le gaulois " + nom + " : ";
+//	}
+	
 	private String prendreParole() {
 		return "Le gaulois " + nom + " : ";
 	}
@@ -25,9 +32,17 @@ public class Gaulois {
 	}
 	
 	
+//	public void frapper(Romain romain) {
+//		System.out.println(nom + " envoie un grand coup dans la machoire de " + romain.getNom());
+//		romain.recevoirCoup((force / 3) * effetPotion);
+//	}
+	
 	public void frapper(Romain romain) {
-		System.out.println(nom + " envoie un grand coup dans la machoire de " + romain.getNom());
-		romain.recevoirCoup((force / 3) * effetPotion);
+		System.out.println(nom + " envoie un grand coup dans la mâchoire de " + romain.getNom());
+		Equipement[] tropheesBatailles = romain.recevoirCoup((force / 3) * effetPotion);
+		for (int i = 0; tropheesBatailles != null && i < tropheesBatailles.length; i++,nbTrophees++) {
+			this.trophees[nbTrophees] = tropheesBatailles[i];
+		}
 	}
 
     @Override
