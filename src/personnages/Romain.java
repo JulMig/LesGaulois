@@ -82,7 +82,7 @@ public class Romain {
 	
 	private Equipement[] ejecterEquipement() {
 		Equipement[] equipementEjecte = new Equipement[nbEquipement];
-		System.out.println("L'équipement de " + nom + "s'envole sous la force du coup.");
+		System.out.println("L'équipement de " + nom + " s'envole sous la force du coup.");
 		
 		int nbEquipementEjecte = 0;
 		for (int i = 0; i < nbEquipement; i++) {	
@@ -98,7 +98,9 @@ public class Romain {
 	
 	
 	
-	
+	public int getForce() {
+		return force;
+	}
 	
 	
 	
